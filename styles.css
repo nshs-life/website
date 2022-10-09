@@ -1,0 +1,55 @@
+body {
+    background: rgb(241,101,33);
+    background: linear-gradient(180deg, rgba(241,101,33,1) 0%, rgba(33,63,153,1) 83%);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#navbar {
+    color: white;
+    font-size: 2vw;
+    vertical-align: middle;
+}
+
+#content {
+    font-size: 7vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+#footer {
+    font-size: 2.1vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+#links {
+    font-size: 1.3vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    color: white;
+    font-size: 1em;
+}
+
+a:link { 
+    text-decoration: none;
+}
