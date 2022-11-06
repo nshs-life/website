@@ -1,6 +1,13 @@
 body {
-    background: rgb(241,101,33);
-    background: linear-gradient(180deg, rgba(241,101,33,1) 0%, rgba(33,63,153,1) 83%);
+    /* background: rgb(241,101,33); */
+    /* background-color: rgb(241,101,33); */
+    /* background: rgb(241,101,33) !important; */
+    background: rgb(241, 141, 48);
+    background: -webkit-radial-gradient(rgb(241, 141, 48), rgb(241,101,33));
+    background: -o-radial-gradient(rgb(241, 141, 48), rgb(241,101,33));
+    background: -moz-radial-gradient(rgb(241, 141, 48), rgb(241,101,33));
+    background: radial-gradient(rgb(241, 141, 48), rgb(241,101,33));
+    /* background: linear-gradient(180deg, rgba(241,101,33,1) 0%, rgba(33,63,153,1) 83%); */
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
