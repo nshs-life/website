@@ -60,7 +60,13 @@ li a {
 a:link { 
     text-decoration: none;
 }
+#navbar ul li ul li{
+    display: none;
+}
 
+#navbar ul #sign-in:hover ul li{
+    display: block;
+}
 .card.user-card {
     border-top: none;
     -webkit-box-shadow: 0 0 1px 2px rgba(0,0,0,0.05), 0 -2px 1px -2px rgba(0,0,0,0.04), 0 0 0 -1px rgba(0,0,0,0.05);
