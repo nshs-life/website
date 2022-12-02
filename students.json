@@ -1,0 +1,6 @@
+[
+   {"student":"person1", "info1": "first info of first person lorem ipsom dolor blah blah blah", "info2": "second info of first person lorem ipsom dolor blah blah blah", "info3": "third info of first person lorem ipsom dolor blah blah blah"}, 
+   {"student":"person2", "info1": "first info of second person lorem ipsom dolor blah blah blah", "info2": "second info of second person lorem ipsom dolor blah blah blah", "info3": "third info of second person lorem ipsom dolor blah blah blah"}, 
+   {"student":"person3", "info1": "first info of third person lorem ipsom dolor blah blah blah", "info2": "second info of third person lorem ipsom dolor blah blah blah", "info3": "third info of third person lorem ipsom dolor blah blah blah"} 
+    
+]
