@@ -241,3 +241,8 @@ a:link {
 	margin: 0 7px 7px 0;
 	padding: 7px;
 }
+
+.g-signin2 {
+    position: absolute;
+    left: 100px;
+  }
