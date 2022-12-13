@@ -20,24 +20,30 @@ nav {
   position: relative;
   float: right;
   height: 5%;
-  padding: 10px;
   display: flex;
   width: 100%;
   align-items: center;
+  gap: 35px;
 }
 
 nav a {
-  padding: 20px 30px;
-  transition: all 0.3s ease;
+  padding: 15px 30px;
+  border: 1px solid;
+  border-image: repeating-linear-gradient(white) 8;
+  -webkit-mask:
+    conic-gradient(at top 1px right 1px, white 90deg, rgb(255, 255, 255)) var(--_i, 200%) 0 /200% var(--_i, 1px) border-box no-repeat,
+    conic-gradient(at bottom 1px left 1px, rgba(255, 255, 255) 90deg, white 0) 0 var(--_i, 200%)/var(--_i, 1px) 200% border-box no-repeat,
+    linear-gradient(rgb(255, 255, 255) 0 0) padding-box no-repeat;
+  transition: .3s, -webkit-mask-position .1s .2s;
 }
 
 nav a:hover {
-  color: #ffffff;
-  background-color: rgba(50, 117, 206, 0.2);
-  cursor: pointer;
+  --_i: 100%;
+  color: white;
+  transition: .3s, -webkit-mask-size .3s .3s;
 }
 
-.sign-in-container{
+.sign-in-container {
   position: absolute;
   right: 1rem;
 }
@@ -57,7 +63,7 @@ main {
   color: white;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
@@ -72,9 +78,10 @@ main>article {
   height: 100%;
 }
 
-main > article[data-status="active"] {
+main>article[data-status="active"] {
   transform: translateY(0%);
 }
+
 main>article[data-status="inactive"] {
   transform: translateX(-100%);
 }
