@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   <script src="https://kit.fontawesome.com/1ff18f330a.js" crossorigin="anonymous"></script>
+  <script src="buttons.js"></script>
 </head>
 
 <body>
@@ -27,18 +28,24 @@
   </nav>
 
   <main>
-    <div class="welcome-slide" data-status="active">
+    <div class = "slides">
+    <div class="welcome-slide" data-index="0" data-status="active">
 
     </div>
-    <div class="who-we-are-slide" data-status="inactive">
+    <div class="who-we-are-slide" data-index="1" data-status="inactive">
 
     </div>
-    <div class="what-we-do-slide" data-status="inactive">
+    <div class="what-we-do-slide" data-index="2" data-status="inactive">
       
     </div>
-    <div class="join-us-slide" data-status="inactive">
+    <div class="join-us-slide" data-index="3" data-status="inactive">
       
     </div>
+  </div>
+  <div class = "change-slide-buttons">
+    <button id = "down-button" onclick="slideDown()"></button>
+    <button id = "up-button" onclick="slideUp()"></button>
+  </div>
   </main>
 
 
