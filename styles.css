@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -11,98 +13,117 @@ span {
   font-family: "Rubik", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-nav {
-  position: relative;
-  float: right;
-  height: 5%;
+body {
   display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 35px;
-}
+  overflow: hidden;
 
-nav a {
-  padding: 15px 30px;
-  border: 1px solid;
-  border-image: repeating-linear-gradient(white) 8;
-  -webkit-mask:
-    conic-gradient(at top 1px right 1px, white 90deg, rgb(255, 255, 255)) var(--_i, 200%) 0 /200% var(--_i, 1px) border-box no-repeat,
-    conic-gradient(at bottom 1px left 1px, rgba(255, 255, 255) 90deg, white 0) 0 var(--_i, 200%)/var(--_i, 1px) 200% border-box no-repeat,
-    linear-gradient(rgb(255, 255, 255) 0 0) padding-box no-repeat;
-  transition: .3s, -webkit-mask-position .1s .2s;
-}
-
-nav a:hover {
-  --_i: 100%;
-  color: white;
-  transition: .3s, -webkit-mask-size .3s .3s;
-}
-
-.sign-in-container {
-  position: absolute;
-  right: 1rem;
-}
-
-main {
-  position: relative;
-  height: 95%;
-  width: 100%;
-}
-
-.more-button button {
-  display: block;
-  justify-content: center;
-  border: none;
-  font-size: 50px;
-  background-color: transparent;
-  color: white;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-main>article {
-  position: absolute;
-  height: 95%;
-  width: 100%;
-  left: 0px;
-  top: 0px;
-  display: grid;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
-main>article[data-status="active"] {
+/* nav bar */
+nav {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  height: 50px;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* nav barlink styles */
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* bottom border when hovered over */
+nav a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #fff;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+nav a:hover:before {
+  opacity: 1;
+}
+
+/* place hammer logo on far left */
+.nav-logo {
+  position: absolute;
+  left: 1rem;
+}
+
+/* turn off underline animation for logo */
+.nav-logo>a:before {
+  border-bottom: transparent;
+}
+
+/* place sign in button on far right */
+.nav-sign-in {
+  position: absolute;
+  right: 2rem;
+}
+
+/* main pages */
+main {
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main>.welcome-slide {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(#000000 20%, #020410 85%, #0f2950 95%, #1f619e);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main>.who-we-are-slide {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(#1f619e 50%, #2673c0);
+}
+
+main>.what-we-do-slide {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(#2673c0 80%, #4792c7);
+}
+
+main>.join-us-slide {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(#4792c7 20%, #49a1e0);
+}
+
+/* swapping pages functionality */
+main>div[data-status="active"] {
   transform: translateY(0%);
 }
 
-main>article[data-status="inactive"] {
-  transform: translateX(-100%);
-}
-
-
-html {
-  background: linear-gradient(#020410 80%, #0f2950 95%, #2a74bb);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
-
-.welcome-text {
-  position: relative;
-  margin: auto;
-  display: block;
-  text-align: center;
-  top: 25vh;
-  font-family: 'Inter';
-  font-size: 40px;
-  color: #ffffff;
+main>div[data-status="inactive"] {
+  transform: translateY(100%);
 }
