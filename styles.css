@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-h1,
 h2,
 h3,
 a,
@@ -13,21 +12,13 @@ span {
   font-family: "Rubik", sans-serif;
 }
 
-body {
-  display: flex;
-  overflow: hidden;
-
-  height: 100%;
-  width: 100%;
-}
-
 /* nav bar */
 nav {
   position: absolute;
   z-index: 2;
   display: flex;
   align-items: center;
-  padding: 50px;
+  padding: 40px;
   height: 50px;
   width: 100%;
   gap: 20px;
@@ -78,52 +69,43 @@ nav a:hover:before {
 /* main pages */
 main {
   flex-grow: 1;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  align-items: center;
+	justify-content: center;
+  display: flex;
+}
+
+.slides {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .welcome-slide {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  position: absolute;
   background: linear-gradient(#000000 20%, #020410 85%, #0f2950 95%, #1f619e);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .who-we-are-slide {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  position: absolute;
   background: linear-gradient(#1f619e 50%, #2673c0);
 }
 
 .what-we-do-slide {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background: linear-gradient(#2673c0 80%, #4792c7);
+  background: linear-gradient(#2673c0 70%, #4792c7);
 }
 
 .join-us-slide {
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  position: absolute;
   background: linear-gradient(#4792c7 20%, #49a1e0);
 }
 
-/* swapping pages functionality */
-.slides>div[data-status="active"] {
-  transform: translateY(0%);
-}
 
-.slides>div[data-status="inactive"] {
-  transform: translateY(-100%);
+::-webkit-scrollbar {
+  width: 0px;
 }
