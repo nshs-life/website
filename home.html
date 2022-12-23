@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   <script src="https://kit.fontawesome.com/1ff18f330a.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="buttons.js"></script>
 </head>
 
@@ -29,22 +30,23 @@
 
   <main>
     <div class="slides">
-      <section class="welcome-slide slide">
+      <section id="welcome-slide", class="slide">
         <h2>Welcome to</h2>
-        <h2><span id="nshs-title-text">nshs</span><span id="misc-title-text">.</span><span id="life-title-text">life</span></h3>
+        <h2><span id="nshs-title-text">nshs</span><span id="misc-title-text">.</span><span id="life-title-text">life</span></h2>
+        <button id="down-button">Learn More</button>
       </section>
-      <section class="who-we-are-slide slide">
-
+      <section id="who-we-are-slide", class="slide">
+        <a href="#what-we-do-slide">Learn More</a>
       </section>
-      <section class="what-we-do-slide slide">
-
+      <section id="what-we-do-slide", class="slide">
+        <a href="#join-us-slide">Learn More</a>
       </section>
-      <section class="join-us-slide slide">
+      <section id="join-us-slide", class="slide">
 
       </section>
       </div>
       <div class="change-slide-buttons">
-        <button id="down-button" onclick="slideDown()"></button>
+        <button id="down-button" onclick="slideDown()">Learn More</button>
         <button id="up-button" onclick="slideUp()"></button>
       </div>
   </main>
